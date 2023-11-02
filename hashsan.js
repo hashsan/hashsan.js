@@ -1,4 +1,25 @@
+/*
+v1 new
+v2 throw the underscore 
+*/
 ;(function(root){
+//from underscore
+//https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore.js
+// Internal function for creating a `toString`-based type tester.
+  function tagTester(name) {
+    var tag = '[object ' + name + ']';
+    return function(obj) {
+      return toString.call(obj) === tag;
+    };
+  }
+
+  var isString = tagTester('String');
+  var isFunction = tagTester('Function');  
+  var _={}
+  _.isString = isString
+  _.isFunction = isFunction
+///////////////////////////////////////////
+  
 var $={}
 $.debug = false;
 $.hashary=[];

@@ -1,6 +1,7 @@
 /*
 v1 new
 v2 throw the underscore 
+v3 scroll
 */
 ;(function(root){
 //from underscore
@@ -31,6 +32,8 @@ $._hashchange=(e)=>{
     if($.debug) console.log('not found the hash! ',hash)
     return
   }
+  //v3.0 scroll
+  window.scroll(0,0) //scroll back to the top  
   // do render
   gethash(hash).cb()  
 }

@@ -2,6 +2,7 @@
 v1 new
 v2 throw the underscore 
 v3 scroll
+v4 isFunction is async Function not woking so replace
 */
 ;(function(root){
 //from underscore
@@ -15,7 +16,10 @@ v3 scroll
   }
 
   var isString = tagTester('String');
-  var isFunction = tagTester('Function');  
+  //var isFunction = tagTester('Function');  
+
+  function isFunction(value) {return typeof value === 'function';} //angur isFunction
+  
   var _={}
   _.isString = isString
   _.isFunction = isFunction

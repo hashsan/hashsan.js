@@ -4,23 +4,12 @@ v2 throw the underscore
 v3 scroll
 v4 isFunction is async Function not woking so replace
 v5 hashsan stable full, so off the console.log
+v6 cut off the underscore's check, change angular
 */
 ;(function(root){
-//from underscore
-//https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore.js
-// Internal function for creating a `toString`-based type tester.
-  function tagTester(name) {
-    var tag = '[object ' + name + ']';
-    return function(obj) {
-      return toString.call(obj) === tag;
-    };
-  }
 
-  var isString = tagTester('String');
-  //var isFunction = tagTester('Function');  
-
-  function isFunction(value) {return typeof value === 'function';} //angur isFunction
-  
+  function isFunction(value) {return typeof value === 'function';} //angular isFunction
+  function isString(value) {return typeof value === 'string';} //angular isString
   var _={}
   _.isString = isString
   _.isFunction = isFunction

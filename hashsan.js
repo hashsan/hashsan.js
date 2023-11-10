@@ -3,6 +3,7 @@ v1 new
 v2 throw the underscore 
 v3 scroll
 v4 isFunction is async Function not woking so replace
+v5 hashsan stable full, so off the console.log
 */
 ;(function(root){
 //from underscore
@@ -72,8 +73,9 @@ $.ishash=(hash)=>{
   return !!gethash(hash)
 }
  ////
- console.log('---- hashsan.js ----')
- console.log($)
- console.log('----/hashsan.js ----')  
+ //v5
+ //console.log('---- hashsan.js ----')
+ //console.log($)
+ //console.log('----/hashsan.js ----')  
  root.hashsan = $
-})(this||window);
+})(window||this);

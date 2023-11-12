@@ -5,6 +5,7 @@ v3 scroll
 v4 isFunction is async Function not woking so replace
 v5 hashsan stable full, so off the console.log
 v6 cut off the underscore's check, change angular
+v7 bug fix direct asccess and same start hash
 */
 ;(function(root){
 
@@ -34,8 +35,8 @@ $._hashchange=(e)=>{
 $.start=(hash)=>{
   var {_hashchange} = $
   window.addEventListener('hashchange',_hashchange,false)
-  const cash=location.hash  
-  location.hash = hash
+  const cash = location.hash  
+  location.hash = hash===cash ? '#' : hash; //v7 special case and same issue. 
   //
   if(cash){
     //direct #anchor access

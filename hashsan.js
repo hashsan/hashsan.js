@@ -36,7 +36,7 @@ $.start=(hash)=>{
   var {_hashchange} = $
   window.addEventListener('hashchange',_hashchange,false)
   const cash = location.hash  
-  location.hash = hash===cash ? '#' : hash; //v7 special case and same issue. 
+  location.hash = (hash===cash) ? '#' : hash; //v7 special case and same issue. 
   //
   if(cash){
     //direct #anchor access
